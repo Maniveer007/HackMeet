@@ -1,0 +1,246 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "NFTmeets",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "description",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "host",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "encreptedkey",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "decrpytingkey",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "NFTaddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "no_of_nfts",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_des",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_en",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_de",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "_nft",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_value",
+				"type": "uint256"
+			}
+		],
+		"name": "createNFTmeeting",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_des",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_gid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_meetingid",
+				"type": "string"
+			}
+		],
+		"name": "createsismomeeting",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getallNFTmeetings",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "host",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "encreptedkey",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "decrpytingkey",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "NFTaddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "no_of_nfts",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct demobubble.NFTmeeting[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getallsismomeetings",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "host",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "sismogroupid",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "meetingid",
+						"type": "string"
+					}
+				],
+				"internalType": "struct demobubble.sismomeeting[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "sismomeets",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "description",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "host",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "sismogroupid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "meetingid",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
