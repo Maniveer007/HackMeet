@@ -1,50 +1,73 @@
 import React from 'react'
-import {ethers} from 'ethers'
+import { ethers } from 'ethers'
 import { useNavigate } from "react-router-dom";
+import '../components/css/Home.css'
+
 
 const Home = () => {
-    const navigate = useNavigate();
-    const connect=async()=>{
-        const provider=new ethers.providers.Web3Provider(window.ethereum)
-        try {
-            window.ethereum.on("chainChanged",()=>{
-                window.location.reload();
-              })
-      
-              window.ethereum.on("accountsChanged",()=>{
-                window.location.reload();
-                
-              })
-            const net=await provider.getNetwork()
-            console.log(net.chainId);
-        if(net.chainId!="0x13881"){
+  const navigate = useNavigate();
+  const connect = async () => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+    try {
+      window.ethereum.on("chainChanged", () => {
+        window.location.reload();
+      })
+
+      window.ethereum.on("accountsChanged", () => {
+        window.location.reload();
+
+      })
+      await provider.send("eth_requestAccounts", []);
+      const net = await provider.getNetwork()
+      console.log(net.chainId);
+      if (net.chainId != "0x13881") {
         //   console.log("entered");
-          try {
-            await window.ethereum.request({
-              method: 'wallet_switchEthereumChain',
-              params: [{ chainId: '0x13881'}],
-            });
-            
-         } catch (switchError) {
-            console.log(switchError)
-          }
+        try {
+          await window.ethereum.request({
+            method: 'wallet_switchEthereumChain',
+            params: [{ chainId: '0x13881' }],
+          });
+
+        } catch (switchError) {
+          console.log(switchError)
         }
-            await provider.send("eth_requestAccounts", []);
-            const signer=await provider.getSigner();
-            // console.log(signer);
-            if(signer.getAddress()){
-                navigate("/live");
-            }else{
-                window.alert("connect to wallet")
-            }
-        } catch (error) {
-            console.log(error);
-        }
-            
+      }
+      const signer = await provider.getSigner();
+      // console.log(signer);
+      if (signer.getAddress()) {
+        navigate("/live");
+      } else {
+        window.alert("connect to wallet")
+      }
+    } catch (error) {
+      console.log(error);
     }
-    connect();
+
+  }
+  connect();
   return (
-    <button onClick={connect}>connect wallet</button>
+    <div className='Headerdiv'>
+      {/* ths is the top headernavbar */}
+      <div className="dashboard">
+        <div className="dashboard-header">
+          <h1>Empower Your</h1>
+          <h1 className="highlighted-text">Connections</h1>
+        </div>
+        <p>Your All-in-One Meeting and Hosting Platform</p>
+
+      </div>
+      <div class="description">
+        <p>
+          Welcome to <strong>Hackmeet</strong> – your gateway to seamless virtual connections. Join meetings effortlessly, connect your wallet with MetaMask for secure transactions, and experience private or public meetings with encrypted video calls. With Hackmeet, managing your meeting history is a breeze, ensuring your virtual connections are always at your fingertips.
+        </p>
+      </div>
+       
+      {/* card */}
+      
+      <button onClick={connect}>connectwallet</button>
+      {/* <a href='/aboutus'>aboutus</a> */}
+    </div>
+
   )
 }
 
