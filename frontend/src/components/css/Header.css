@@ -1,0 +1,92 @@
+
+/* Navbar.css */
+
+
+@font-face {
+  font-family: 'paytone';
+  src: url('/public/PaytoneOne-Regular.ttf');
+}
+
+
+.navbar {
+  z-index: 1;
+  display: flex;
+  margin: 20px 0px 0 0px;
+  height: 70px;
+  padding-block-end: 10px;
+  padding-inline-start: 10px;
+  padding-block-start: 1px;
+  /* border: 0.5px solid gray; */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Extend to the end of the screen */
+}
+
+.logoclass {
+  
+  margin-right: 20px; /* Add margin to separate the image from text */
+}
+
+.nav-item {
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding: 20px 50px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  text-decoration: none; /* Remove underline from links */
+  color: rgb(120, 116, 116); /* Initial text color */
+}
+.nav-item:hover {
+  color: rgb(92, 205, 243); /* Text color on hover */
+}
+.nav-item::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0; /* Start from the left edge */
+  width: 0;
+  height: 2px;
+  background-color: lightgray;
+  transition: width 0.3s; /* Only transition the width */
+}
+
+.nav-item:hover::before,
+.nav-item.selected::before { /* Add this selector for selected item */
+  width: 100%; /* Slide from left to right on hover or when selected */
+}
+
+/* Style for selected item */
+.nav-item.selected {
+  color: lightblue;
+}
+
+body{
+  background-color: white;
+}
+
+
+
+.dashboard {
+  font-family:'paytone';
+  /* font-family: 'PaytoneOne-Regular.ttf'; */
+  padding: 20px; /* Add padding for spacing */
+  font-size: 24px; /* Set font size to 24px */
+  color: black; /* Set text color to black */
+}
+
+.dashboard-header {
+  font-size: 36px; /* Increase font size for the header */
+  font-weight: bold; /* Make the header text bold */
+}
+
+.highlighted-text {
+  color: rgb(11, 102, 133); /* Set the text color of "Connections" to light blue */
+  display: inline; /* Ensure it's inline with other text */
+  margin-left: 10px; /* Add margin to separate it from the previous text */
+  margin-right: 0; /* Remove right margin */
+  padding: 0; /* Remove padding */
+  line-height: 1; /* Reduce spacing between lines */
+}
+
+

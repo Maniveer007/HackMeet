@@ -1,12 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
+import '../components/css/NFT.css'
 
-const NFTcard = ({props,idx}) => {
-    // console.log(props);
-    // console.log(idx);
+const NFTcard = ({ props, idx }) => {
+  console.log(props);
+
   return (
-    <div><a href={`/NFT/${idx}`}>
-      NFTcard
-      </a></div>
+    <div>
+      
+      <div className="second hero">
+        <div className='Hostname'>
+          
+          Hostname : {props.name}
+          <br></br>
+          Hostaddress :
+          <br></br>
+          {props.host}
+          <br></br>
+          NFTAddress :
+          <br></br>
+          {props.NFTaddress}
+        </div>
+        <img className="meeting-img" src="" alt="" />
+        <div className="hero-description-bk"></div>
+        <div className="hero-logo">
+          <img src="\images\livelogo.jpg" alt="" />
+        </div>
+        <div className="meeting-description">
+          <p>DESC : {props.description}</p>
+        </div>
+
+        <div className="button-30">
+          <a href={`/NFT/${idx}`}>Join</a>
+        </div>
+      </div>
+
+
+    </div>
   )
 }
 
