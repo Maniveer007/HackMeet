@@ -140,3 +140,14 @@
   box-shadow: #D6D6E7 0 3px 7px inset;
   transform: translateY(2px);
 }
+
+.Hostname {
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  background-color: black;
+  color: white;
+
+}
