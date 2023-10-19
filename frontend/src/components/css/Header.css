@@ -61,32 +61,8 @@
   color: lightblue;
 }
 
-body{
-  background-color: white;
-}
 
 
 
-.dashboard {
-  font-family:'paytone';
-  /* font-family: 'PaytoneOne-Regular.ttf'; */
-  padding: 20px; /* Add padding for spacing */
-  font-size: 24px; /* Set font size to 24px */
-  color: black; /* Set text color to black */
-}
-
-.dashboard-header {
-  font-size: 36px; /* Increase font size for the header */
-  font-weight: bold; /* Make the header text bold */
-}
-
-.highlighted-text {
-  color: rgb(11, 102, 133); /* Set the text color of "Connections" to light blue */
-  display: inline; /* Ensure it's inline with other text */
-  margin-left: 10px; /* Add margin to separate it from the previous text */
-  margin-right: 0; /* Remove right margin */
-  padding: 0; /* Remove padding */
-  line-height: 1; /* Reduce spacing between lines */
-}
 
 
