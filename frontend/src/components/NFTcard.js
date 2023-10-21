@@ -19,6 +19,8 @@ const NFTcard = ({ props, idx }) => {
           NFTAddress :
           <br></br>
           {props.NFTaddress}
+          <br></br>
+          Type: NFT
         </div>
         <img className="meeting-img" src="" alt="" />
         <div className="hero-description-bk"></div>

@@ -13,9 +13,7 @@ const SISMOcard = ({props,idx}) => {
         <br></br>
         {props.host}
         <br></br>
-        NFTAddress :
-        <br></br>
-        {props.NFTaddress}
+         Type: Sismo
       </div>
       <img className="meeting-img" src="" alt="" />
       <div className="hero-description-bk"></div>
@@ -27,7 +25,7 @@ const SISMOcard = ({props,idx}) => {
       </div>
 
       <div className="button-30">
-    <a href={`/sismo/${idx}`}>SISMOcard</a>
+    <a href={`/sismo/${idx}`}>join</a>
       </div>
     </div>
 
